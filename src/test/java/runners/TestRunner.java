@@ -1,0 +1,25 @@
+package runners;
+
+/**
+ *
+ * @author ahmed
+ */
+
+import org.junit.platform.suite.api.ConfigurationParameter;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
+
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("features")
+@ConfigurationParameter(key = "cucumber.glue", value = "stepdefinitions")
+@ConfigurationParameter(key = "cucumber.plugin", value = "pretty, html:target/cucumber-reports.html")
+public class TestRunner {
+    
+}
+
+
+
+
+
